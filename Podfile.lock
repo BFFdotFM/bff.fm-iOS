@@ -1,0 +1,21 @@
+PODS:
+  - Expecta (0.3.1)
+  - OCMock (3.1.1)
+  - OHHTTPStubs (3.1.6):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/Core (3.1.6)
+  - Specta (0.2.1)
+
+DEPENDENCIES:
+  - Expecta
+  - OCMock
+  - OHHTTPStubs
+  - Specta
+
+SPEC CHECKSUMS:
+  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
+  OHHTTPStubs: 6781373b69e0a67b27239799f11764d0fbefac55
+  Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
+
+COCOAPODS: 0.34.4
