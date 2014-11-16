@@ -17,7 +17,6 @@
             _url = [dictionary objectForKey:@"url"];
             _shortDescription = [dictionary objectForKey:@"short_description"];
             
-            _day = [[[dictionary objectForKey:@"Airtime"] objectForKey:@"weekday"] intValue];
             
             // When an image does not exist, it is represented in the JSON as "Image: 0"
             id image = [dictionary objectForKey:@"Image"];
@@ -25,14 +24,34 @@
                 _image = [[Image alloc] initWithDictionary:image];
             }
             
-            NSString *startGMT = [[dictionary objectForKey:@"Airtime"] objectForKey:@"start_date_time_gmt"];
-            NSString *endGMT = [[dictionary objectForKey:@"Airtime"] objectForKey:@"end_date_time_gmt"];
+            if ([[dictionary allKeys] containsObject:@"Airtime"]) {
+                NSDictionary *airtime = [dictionary objectForKey:@"Airtime"];
+                _day = [[airtime objectForKey:@"weekday"] intValue];
 
-            NSDateFormatter *formatter = [NSDateFormatter new];
-            [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ssZ"];
-            
-            _start = [formatter dateFromString:[NSString stringWithFormat:@"%@-0000", startGMT]];
-            _end = [formatter dateFromString:[NSString stringWithFormat:@"%@-0000", endGMT]];
+                NSString *startGMT = [airtime objectForKey:@"start_date_time_gmt"];
+                NSString *endGMT = [airtime objectForKey:@"end_date_time_gmt"];
+
+                NSDateFormatter *formatter = [NSDateFormatter new];
+                [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ssZ"];
+                
+                _start = [formatter dateFromString:[NSString stringWithFormat:@"%@-0000", startGMT]];
+                _end = [formatter dateFromString:[NSString stringWithFormat:@"%@-0000", endGMT]];
+            } else if ([[dictionary allKeys] containsObject:@"airtimes"]) {
+                NSArray *airtimes = [dictionary objectForKey:@"airtimes"];
+                if ([airtimes count] > 0) {
+                    NSDictionary *airtime = [airtimes objectAtIndex:0];
+                    _day = [[airtime objectForKey:@"weekday"] intValue];
+                    
+                    NSString *startGMT = [airtime objectForKey:@"start_gmt"];
+                    NSString *endGMT = [airtime objectForKey:@"end_gmt"];
+                    
+                    NSDateFormatter *formatter = [NSDateFormatter new];
+                    [formatter setDateFormat:@"HH:mm:ssZ"];
+                    
+                    _start = [formatter dateFromString:[NSString stringWithFormat:@"%@-0000", startGMT]];
+                    _end = [formatter dateFromString:[NSString stringWithFormat:@"%@-0000", endGMT]];
+                }
+            }
         }
     }
     

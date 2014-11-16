@@ -1,5 +1,5 @@
 //
-//  ShowsViewController.h
+//  ShowCollectionViewCell.h
 //  bff.fm
 //
 //  Created by Brian Temple on 11/15/14.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Show.h"
 
-@interface ShowsViewController : UICollectionViewController <UICollectionViewDataSource>
-
+@interface ShowCollectionViewCell : UICollectionViewCell
+- (void)setShow:(Show *)show;
 @end

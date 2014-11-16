@@ -10,7 +10,8 @@
 #import "Image.h"
 
 NS_ENUM(NSInteger, WeekDay) {
-    Monday = 1,
+    NotADay = 0,
+    Monday,
     Tuesday,
     Wednesday,
     Thursday,
@@ -18,6 +19,8 @@ NS_ENUM(NSInteger, WeekDay) {
     Saturday,
     Sunday
 };
+
+#define WeekDayLabels @[@"Not a day", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday", @"Sunday"]
 
 @interface Show : NSObject
 @property (strong, nonatomic) NSString *shortDescription;

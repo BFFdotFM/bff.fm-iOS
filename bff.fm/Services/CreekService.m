@@ -41,7 +41,6 @@
     [manager GET:@"http://bff.fm/api/shows" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *shows = [NSMutableArray new];
         for (NSDictionary *show in ((NSArray *)responseObject)) {
-            NSLog(@"\n\nShow: %@", show);
             [shows addObject:[[Show alloc] initWithDictionary:show]];
         }
         
