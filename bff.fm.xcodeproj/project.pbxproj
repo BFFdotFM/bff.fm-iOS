@@ -13,7 +13,6 @@
 		90655BBB868E41FE80AA5362 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = D97ADB62813951F788505EB1 /* LaunchScreen.xib */; };
 		962BD471F1B55FA5BF0793F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E367F5D5A1EC3A103F3C3D0F /* AppDelegate.m */; };
 		B4DF2146E71485D5B71A5827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A62FF1A1E7A9D49EAEDEF2 /* Foundation.framework */; };
-		D376AB5A1A17EE070038F1F5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D376AB581A17EE070038F1F5 /* RootViewController.m */; };
 		D376AB611A17F0640038F1F5 /* StreamingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D376AB601A17F0640038F1F5 /* StreamingService.m */; };
 		D376AB641A17F2440038F1F5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D376AB631A17F2440038F1F5 /* HomeViewController.m */; };
 		D376AB681A17F2B00038F1F5 /* ShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D376AB671A17F2B00038F1F5 /* ShowsViewController.m */; };
@@ -23,6 +22,8 @@
 		D3F84BA21A1804C700BCAE1E /* CreekService.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F84BA11A1804C700BCAE1E /* CreekService.m */; };
 		D3F84BA51A1808C600BCAE1E /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F84BA41A1808C600BCAE1E /* Show.m */; };
 		D3F84BA71A1818CE00BCAE1E /* CreekServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F84BA61A1818CE00BCAE1E /* CreekServiceTests.m */; };
+		D3FE2FA31A18523A005A323F /* RootPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE2FA21A18523A005A323F /* RootPageViewController.m */; };
+		D3FE2FA91A1857E4005A323F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE2FA81A1857E4005A323F /* RootViewController.m */; };
 		DC1912ACD7DE0E1F25A0286B /* libPods-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9D6E5DDCD24C5EA85D909F /* libPods-app.a */; };
 		F55DFC5D1C8C0BBB66F83921 /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A59D09CB371BB5218CFB53 /* libPods-unit_tests.a */; };
 /* End PBXBuildFile section */
@@ -53,8 +54,6 @@
 		B41AB26F4FD8B24FE90DB136 /* bff.fm-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "bff.fm-Prefix.pch"; sourceTree = "<group>"; };
 		B582706505D6F7D1D9AA1DB5 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
 		CD946188FFBE956808E311D3 /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
-		D376AB571A17EE070038F1F5 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		D376AB581A17EE070038F1F5 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		D376AB5F1A17F0640038F1F5 /* StreamingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingService.h; sourceTree = "<group>"; };
 		D376AB601A17F0640038F1F5 /* StreamingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingService.m; sourceTree = "<group>"; };
 		D376AB621A17F2440038F1F5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -72,6 +71,10 @@
 		D3F84BA31A1808C600BCAE1E /* Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Show.h; sourceTree = "<group>"; };
 		D3F84BA41A1808C600BCAE1E /* Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show.m; sourceTree = "<group>"; };
 		D3F84BA61A1818CE00BCAE1E /* CreekServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreekServiceTests.m; sourceTree = "<group>"; };
+		D3FE2FA11A18523A005A323F /* RootPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootPageViewController.h; sourceTree = "<group>"; };
+		D3FE2FA21A18523A005A323F /* RootPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootPageViewController.m; sourceTree = "<group>"; };
+		D3FE2FA71A1857E4005A323F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D3FE2FA81A1857E4005A323F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		D820653B1517EFB19E393079 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D97ADB62813951F788505EB1 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		E367F5D5A1EC3A103F3C3D0F /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -181,8 +184,10 @@
 			children = (
 				1795A349A612C057F22703FC /* AppDelegate.h */,
 				E367F5D5A1EC3A103F3C3D0F /* AppDelegate.m */,
-				D376AB571A17EE070038F1F5 /* RootViewController.h */,
-				D376AB581A17EE070038F1F5 /* RootViewController.m */,
+				D3FE2FA71A1857E4005A323F /* RootViewController.h */,
+				D3FE2FA81A1857E4005A323F /* RootViewController.m */,
+				D3FE2FA11A18523A005A323F /* RootPageViewController.h */,
+				D3FE2FA21A18523A005A323F /* RootPageViewController.m */,
 				D376AB621A17F2440038F1F5 /* HomeViewController.h */,
 				D376AB631A17F2440038F1F5 /* HomeViewController.m */,
 				D376AB661A17F2B00038F1F5 /* ShowsViewController.h */,
@@ -497,10 +502,11 @@
 				962BD471F1B55FA5BF0793F4 /* AppDelegate.m in Sources */,
 				D376AB681A17F2B00038F1F5 /* ShowsViewController.m in Sources */,
 				36F1BF771BBB7608C66DDC5F /* Main.storyboard in Sources */,
-				D376AB5A1A17EE070038F1F5 /* RootViewController.m in Sources */,
 				D376AB641A17F2440038F1F5 /* HomeViewController.m in Sources */,
 				D3DE9C591A182E1F00E2C41B /* Image.m in Sources */,
+				D3FE2FA31A18523A005A323F /* RootPageViewController.m in Sources */,
 				D3F84BA21A1804C700BCAE1E /* CreekService.m in Sources */,
+				D3FE2FA91A1857E4005A323F /* RootViewController.m in Sources */,
 				90655BBB868E41FE80AA5362 /* LaunchScreen.xib in Sources */,
 				39720043CA85000A157AF5D5 /* main.m in Sources */,
 				D376AB6E1A17F33A0038F1F5 /* SupportViewController.m in Sources */,
