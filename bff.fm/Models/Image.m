@@ -22,4 +22,9 @@
     
     return self;
 }
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<Image: %@", self.originalUrl];
+}
 @end

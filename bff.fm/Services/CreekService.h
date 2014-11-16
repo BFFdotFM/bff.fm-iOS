@@ -13,4 +13,5 @@
 + (CreekService *)sharedService;
 
 - (void)fetchCurrentlyBroadcating:(void (^) (Show *show))completionHandler;
+- (void)fetchAllShows:(void (^) (NSArray *shows))completionHandler;
 @end

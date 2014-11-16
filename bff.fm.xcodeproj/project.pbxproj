@@ -13,6 +13,7 @@
 		90655BBB868E41FE80AA5362 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = D97ADB62813951F788505EB1 /* LaunchScreen.xib */; };
 		962BD471F1B55FA5BF0793F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E367F5D5A1EC3A103F3C3D0F /* AppDelegate.m */; };
 		B4DF2146E71485D5B71A5827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A62FF1A1E7A9D49EAEDEF2 /* Foundation.framework */; };
+		D300CC6A1A1870A1004DD3F0 /* ShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D300CC691A1870A1004DD3F0 /* ShowDetailViewController.m */; };
 		D376AB611A17F0640038F1F5 /* StreamingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D376AB601A17F0640038F1F5 /* StreamingService.m */; };
 		D376AB641A17F2440038F1F5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D376AB631A17F2440038F1F5 /* HomeViewController.m */; };
 		D376AB681A17F2B00038F1F5 /* ShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D376AB671A17F2B00038F1F5 /* ShowsViewController.m */; };
@@ -54,6 +55,8 @@
 		B41AB26F4FD8B24FE90DB136 /* bff.fm-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "bff.fm-Prefix.pch"; sourceTree = "<group>"; };
 		B582706505D6F7D1D9AA1DB5 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
 		CD946188FFBE956808E311D3 /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
+		D300CC681A1870A1004DD3F0 /* ShowDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDetailViewController.h; sourceTree = "<group>"; };
+		D300CC691A1870A1004DD3F0 /* ShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDetailViewController.m; sourceTree = "<group>"; };
 		D376AB5F1A17F0640038F1F5 /* StreamingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingService.h; sourceTree = "<group>"; };
 		D376AB601A17F0640038F1F5 /* StreamingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingService.m; sourceTree = "<group>"; };
 		D376AB621A17F2440038F1F5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				D376AB6A1A17F2FA0038F1F5 /* EventsViewController.m */,
 				D376AB6C1A17F33A0038F1F5 /* SupportViewController.h */,
 				D376AB6D1A17F33A0038F1F5 /* SupportViewController.m */,
+				D300CC681A1870A1004DD3F0 /* ShowDetailViewController.h */,
+				D300CC691A1870A1004DD3F0 /* ShowDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 				D3F84BA21A1804C700BCAE1E /* CreekService.m in Sources */,
 				D3FE2FA91A1857E4005A323F /* RootViewController.m in Sources */,
 				90655BBB868E41FE80AA5362 /* LaunchScreen.xib in Sources */,
+				D300CC6A1A1870A1004DD3F0 /* ShowDetailViewController.m in Sources */,
 				39720043CA85000A157AF5D5 /* main.m in Sources */,
 				D376AB6E1A17F33A0038F1F5 /* SupportViewController.m in Sources */,
 				D3F84BA51A1808C600BCAE1E /* Show.m in Sources */,
@@ -587,7 +593,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -616,6 +622,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -643,6 +650,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -694,7 +702,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;

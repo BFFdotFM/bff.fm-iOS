@@ -35,4 +35,21 @@
     }];
 }
 
+- (void)fetchAllShows:(void (^) (NSArray *shows))completionHandler
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://bff.fm/api/shows" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSMutableArray *shows = [NSMutableArray new];
+        for (NSDictionary *show in ((NSArray *)responseObject)) {
+            NSLog(@"\n\nShow: %@", show);
+            [shows addObject:[[Show alloc] initWithDictionary:show]];
+        }
+        
+        completionHandler(shows);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        completionHandler(nil);
+    }];
+}
+
 @end

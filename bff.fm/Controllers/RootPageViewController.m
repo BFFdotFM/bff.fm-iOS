@@ -71,4 +71,13 @@
     [self.pageControl setCurrentPage:((NSInteger)currentIndex)];
 }
 
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+    if (completed == NO) {
+        NSUInteger currentIndex = [self.viewControllers indexOfObject:[previousViewControllers objectAtIndex:0]];
+        [self.pageControl setCurrentPage:((NSInteger)currentIndex)];
+    }
+}
+
+
 @end

@@ -34,6 +34,16 @@ describe(@"CreekService", ^{
             }];
         });
     });
+    
+    it(@"should return a valid set of shows", ^{
+        waitUntil(^(DoneCallback done) {
+            [[CreekService sharedService] fetchAllShows:^(NSArray *shows) {
+                expect(shows).notTo.beNil();
+                expect([shows count]).to.beGreaterThan(0);
+                done();
+            }];
+        });
+    });
 });
 
 SpecEnd

@@ -9,9 +9,15 @@
 #import "ShowsViewController.h"
 
 @interface ShowsViewController ()
-
+- (IBAction)popup:(id)sender;
 @end
 
 @implementation ShowsViewController
-
+- (IBAction)popup:(id)sender
+{
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ShowDetailViewController"];
+    [self presentViewController:vc animated:YES completion:^{
+        NSLog(@"Done");
+    }];
+}
 @end

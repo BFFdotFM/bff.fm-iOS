@@ -28,11 +28,7 @@
     [super viewDidLoad];
     [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     [self.playButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateSelected];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+    
     [[CreekService sharedService] fetchCurrentlyBroadcating:^(Show *show) {
         [self setCurrentlyBroadcasting:show];
     }];
@@ -41,8 +37,11 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
     // Set correct button state
     self.playButton.selected = [[StreamingService sharedService] isPlaying];
+    
+    [self setCurrentlyBroadcasting:self.show];
 }
 
 - (void)setCurrentlyBroadcasting:(Show *)show
