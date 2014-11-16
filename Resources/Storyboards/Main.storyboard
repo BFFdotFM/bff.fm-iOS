@@ -34,19 +34,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home View Controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vji-Ip-umP">
-                                <rect key="frame" x="77" y="273" width="167" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="j20-cq-fGB" userLabel="background">
+                                <rect key="frame" x="0.0" y="75" width="320" height="493"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-Rv-gUM" userLabel="Current Show">
+                                <rect key="frame" x="16" y="85" width="288" height="317"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bw-N9-z64" userLabel="Name">
+                                        <rect key="frame" x="8" y="288" width="272" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Ryq-Vo-qAo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gfk-Rh-l7W" userLabel="Logo">
+                                        <rect key="frame" x="8" y="8" width="272" height="272"/>
+                                        <color key="backgroundColor" red="0.9450981021" green="0.49019610879999997" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="272" id="Ogi-7X-J46"/>
+                                            <constraint firstAttribute="height" constant="272" id="uTO-H4-e2A"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gfk-Rh-l7W" secondAttribute="trailing" constant="8" id="EDD-oH-GXW"/>
+                                    <constraint firstAttribute="height" constant="317" id="UTq-b2-FiN"/>
+                                    <constraint firstItem="7Bw-N9-z64" firstAttribute="leading" secondItem="7mo-Rv-gUM" secondAttribute="leading" constant="8" id="ixH-WU-3pd"/>
+                                    <constraint firstItem="Gfk-Rh-l7W" firstAttribute="leading" secondItem="7mo-Rv-gUM" secondAttribute="leading" constant="8" id="rbD-E6-6oC"/>
+                                    <constraint firstItem="Gfk-Rh-l7W" firstAttribute="top" secondItem="7mo-Rv-gUM" secondAttribute="top" constant="8" id="sBP-pq-W57"/>
+                                    <constraint firstItem="7Bw-N9-z64" firstAttribute="top" secondItem="Gfk-Rh-l7W" secondAttribute="bottom" constant="8" id="tA4-dk-6VC"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Bw-N9-z64" secondAttribute="trailing" constant="8" id="wHU-vH-djB"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="EOi-xx-3SQ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="Cb1-q1-Vvd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="vji-Ip-umP" secondAttribute="centerX" id="o6Z-XL-tBf"/>
-                            <constraint firstAttribute="centerY" secondItem="vji-Ip-umP" secondAttribute="centerY" id="vat-If-aPF"/>
+                            <constraint firstAttribute="trailing" secondItem="7mo-Rv-gUM" secondAttribute="trailing" constant="16" id="7aU-1d-GFx"/>
+                            <constraint firstItem="7mo-Rv-gUM" firstAttribute="leading" secondItem="HvK-Mr-7Ub" secondAttribute="leading" constant="16" id="A4h-YI-cUF"/>
+                            <constraint firstItem="j20-cq-fGB" firstAttribute="leading" secondItem="HvK-Mr-7Ub" secondAttribute="leading" id="Cnj-dR-Jfw"/>
+                            <constraint firstItem="EOi-xx-3SQ" firstAttribute="top" secondItem="HvK-Mr-7Ub" secondAttribute="top" constant="20" id="Ikh-x6-hdM"/>
+                            <constraint firstItem="j20-cq-fGB" firstAttribute="top" secondItem="HvK-Mr-7Ub" secondAttribute="top" constant="75" id="Lo1-fl-Dgk"/>
+                            <constraint firstItem="7mo-Rv-gUM" firstAttribute="top" secondItem="j20-cq-fGB" secondAttribute="top" constant="10" id="R5U-Nc-ogt"/>
+                            <constraint firstAttribute="bottom" secondItem="j20-cq-fGB" secondAttribute="bottom" id="exZ-DM-6SH"/>
+                            <constraint firstItem="EOi-xx-3SQ" firstAttribute="leading" secondItem="HvK-Mr-7Ub" secondAttribute="leading" id="lDy-O1-hrZ"/>
+                            <constraint firstAttribute="trailing" secondItem="j20-cq-fGB" secondAttribute="trailing" id="mpY-11-sV4"/>
+                            <constraint firstAttribute="trailing" secondItem="EOi-xx-3SQ" secondAttribute="trailing" id="nFT-af-aIF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentShowImage" destination="Gfk-Rh-l7W" id="qNp-IW-Q9y"/>
+                        <outlet property="currentShowTitle" destination="7Bw-N9-z64" id="azC-Lb-BYy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSn-HI-DWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,6 +189,10 @@
             <point key="canvasLocation" x="1190" y="1150"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="10" height="5"/>
+        <image name="logo" width="200" height="118"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
