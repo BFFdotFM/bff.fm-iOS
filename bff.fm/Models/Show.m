@@ -17,11 +17,22 @@
             _url = [dictionary objectForKey:@"url"];
             _shortDescription = [dictionary objectForKey:@"short_description"];
             
+            _day = [[[dictionary objectForKey:@"Airtime"] objectForKey:@"weekday"] intValue];
+            
             // When an image does not exist, it is represented in the JSON as "Image: 0"
             id image = [dictionary objectForKey:@"Image"];
             if (image != nil && [image isKindOfClass:[NSDictionary class]]) {
                 _image = [[Image alloc] initWithDictionary:image];
             }
+            
+            NSString *startGMT = [[dictionary objectForKey:@"Airtime"] objectForKey:@"start_date_time_gmt"];
+            NSString *endGMT = [[dictionary objectForKey:@"Airtime"] objectForKey:@"end_date_time_gmt"];
+
+            NSDateFormatter *formatter = [NSDateFormatter new];
+            [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ssZ"];
+            
+            _start = [formatter dateFromString:[NSString stringWithFormat:@"%@-0000", startGMT]];
+            _end = [formatter dateFromString:[NSString stringWithFormat:@"%@-0000", endGMT]];
         }
     }
     

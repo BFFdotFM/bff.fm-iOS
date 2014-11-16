@@ -9,11 +9,25 @@
 #import <Foundation/Foundation.h>
 #import "Image.h"
 
+NS_ENUM(NSInteger, WeekDay) {
+    Monday = 1,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+};
+
 @interface Show : NSObject
 @property (strong, nonatomic) NSString *shortDescription;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) Image *image;
+
+@property (nonatomic, assign) enum WeekDay day;
+@property (strong, nonatomic) NSDate *start;
+@property (strong, nonatomic) NSDate *end;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 @end
