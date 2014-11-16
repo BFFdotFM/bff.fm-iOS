@@ -57,6 +57,15 @@
                                             <constraint firstAttribute="height" constant="272" id="uTO-H4-e2A"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4k-Mw-14e">
+                                        <rect key="frame" x="32" y="31" width="225" height="225"/>
+                                        <state key="normal" image="play">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doPlayPressed:" destination="gOA-x0-WV4" eventType="touchUpInside" id="VeC-9h-5ZN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -92,6 +101,7 @@
                     <connections>
                         <outlet property="currentShowImage" destination="Gfk-Rh-l7W" id="qNp-IW-Q9y"/>
                         <outlet property="currentShowTitle" destination="7Bw-N9-z64" id="azC-Lb-BYy"/>
+                        <outlet property="playButton" destination="Q4k-Mw-14e" id="Vuh-3g-943"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSn-HI-DWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,6 +202,7 @@
     <resources>
         <image name="background" width="10" height="5"/>
         <image name="logo" width="200" height="118"/>
+        <image name="play" width="256" height="256"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

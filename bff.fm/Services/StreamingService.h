@@ -11,6 +11,7 @@
 @interface StreamingService : NSObject
 + (StreamingService *)sharedService;
 
+- (BOOL)isPlaying;
 - (void)play;
 - (void)pause;
 @end

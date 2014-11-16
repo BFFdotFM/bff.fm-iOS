@@ -32,6 +32,11 @@
     return sharedService;
 }
 
+- (BOOL)isPlaying
+{
+    return (self.player.rate > 0 && !self.player.error);
+}
+
 - (void)play
 {
     [self.player play];
