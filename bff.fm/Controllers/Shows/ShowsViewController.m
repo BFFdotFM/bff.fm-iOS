@@ -31,7 +31,32 @@
                 if (![[shows allKeys] containsObject:@(show.day)]) {
                     [shows setObject:[NSMutableArray new] forKey:@(show.day)];
                 }
-                [[shows objectForKey:@(show.day)] addObject:show];
+                
+                NSMutableArray *dayArray = [shows objectForKey:@(show.day)];
+                
+                NSUInteger index = [dayArray indexOfObject:show
+                                             inSortedRange:(NSRange){0, [dayArray count]}
+                                                   options:NSBinarySearchingInsertionIndex
+                                           usingComparator:^NSComparisonResult(id obj1, id obj2) {
+                                               
+                                               NSDate *left = ((Show *) obj1).start;
+                                               NSDate *right = ((Show *) obj2).start;
+                                               
+                                               NSCalendar *calendar = [NSCalendar currentCalendar];
+                                               NSDateComponents *leftComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:left];
+                                               NSInteger leftMinutes = ([leftComponents hour] * 60) + [leftComponents minute];
+                                               
+                                               NSDateComponents *rightComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:right];
+                                               NSInteger rightMinutes = ([rightComponents hour] * 60) + [rightComponents minute];
+                                               
+                                               if (leftMinutes < rightMinutes) {
+                                                   return NSOrderedAscending;
+                                               } else if (leftMinutes > rightMinutes) {
+                                                   return NSOrderedDescending;
+                                               }
+                                               return NSOrderedSame;
+                                           }];
+                [dayArray insertObject:show atIndex:index];
             }
         }
         

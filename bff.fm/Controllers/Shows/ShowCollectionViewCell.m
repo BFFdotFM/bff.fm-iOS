@@ -25,7 +25,7 @@
     self.showTitle.text = show.title;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"hh:mm"];
+    [formatter setDateFormat:@"hh:mm a"];
     [formatter setTimeZone:[NSTimeZone systemTimeZone]];
     
     self.self.showTime.text = [NSString stringWithFormat:@"%@ - %@", [formatter stringFromDate:show.start], [formatter stringFromDate:show.end]];
