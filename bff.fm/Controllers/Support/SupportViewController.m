@@ -9,9 +9,20 @@
 #import "SupportViewController.h"
 
 @interface SupportViewController ()
-
+- (IBAction)goToMerchStore:(id)sender;
+- (IBAction)supportStation:(id)sender;
 @end
 
 @implementation SupportViewController
+
+- (IBAction)goToMerchStore:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://bffdotfm.storenvy.com/"]];
+}
+
+- (IBAction)supportStation:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://bff.fm/support-us"]];
+}
 
 @end
