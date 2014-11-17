@@ -371,82 +371,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dY3-2e-ZiN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPl-EV-uhp" userLabel="About">
-                                        <rect key="frame" x="0.0" y="10" width="320" height="200"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u9-sD-ozW" userLabel="About">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="gUh-3h-8eM"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="  About">
-                                                        <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0y-Ld-5Ev">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="200"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment>
-                                                        <string key="content">BFF.fm – Best Frequencies Forever. An award-winning San Francisco community radio station run by a team of music-obsessed radio enthusiasts, excited to share the stuff we love as we discover it. More than 75 DJs curate and host 60 unique music programs, plus we have 6 talk shows produced by noted local journalists and bloggers.
-
-Awards? Sure- we were named "SF's Best New Radio Station" by The Bold Italic, "Best New Internet Radio Station" by SF Weekly, voted "Best Radio Station" in San Francisco in SF Weekly's annual Reader's Poll, and we were just given a nod in the San Francisco Bay Guardian's "Best of the Bay" issue.
-
-Our studio is located inside of The Secret Alley, an artist workshop that provides local San Francisco artists a place to collaborate, palaver, scheme and dream. It’s easy to have fun and be creative in a Verne-esque library built inside a sea shanty with a ship crashing through it!
-
-Sound cool? We’re always on the look out for talented deejays, venue partners, collaborators and co-conspirators– anyone who loves radio and has big dreams and bright ideas. We also welcome music submissions from local and underground artists.
-
-Best Frequencies, Inc. is a non-profit organization with 501-c3 status. We happily accept tax-deductible donations to help keep us on the air and involved in the music community.  The money we raise (in addition to paying our rent, streaming services, and broadcast equipment maintenance expenses) supports the San Francisco music scene by enabling us to pay the bands that play our showcases and sponsor events that help keep the local music community vibrant.</string>
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="8" name="HelveticaNeue"/>
-                                                            <real key="NSKern" value="0.0"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                                <tabStops/>
-                                                            </paragraphStyle>
-                                                            <color key="NSStrokeColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKZ-ZW-uMV">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                                                <state key="normal">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="supportStation:" destination="vjX-R7-0bp" eventType="touchUpInside" id="QdG-NO-6ae"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="98U-g8-GSt"/>
-                                            <constraint firstAttribute="bottom" secondItem="j0y-Ld-5Ev" secondAttribute="bottom" id="CIV-ie-Ipg"/>
-                                            <constraint firstAttribute="bottom" secondItem="ZKZ-ZW-uMV" secondAttribute="bottom" id="CtQ-yn-adi"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZKZ-ZW-uMV" secondAttribute="trailing" id="MND-aH-jv9"/>
-                                            <constraint firstAttribute="trailing" secondItem="j0y-Ld-5Ev" secondAttribute="trailing" constant="5" id="Mce-Aw-KRt"/>
-                                            <constraint firstItem="ZKZ-ZW-uMV" firstAttribute="top" secondItem="PPl-EV-uhp" secondAttribute="top" id="Qze-iS-LGD"/>
-                                            <constraint firstItem="ZKZ-ZW-uMV" firstAttribute="leading" secondItem="PPl-EV-uhp" secondAttribute="leading" id="TFK-jN-5n3"/>
-                                            <constraint firstAttribute="trailing" secondItem="4u9-sD-ozW" secondAttribute="trailing" id="WLq-BC-Vpe"/>
-                                            <constraint firstItem="4u9-sD-ozW" firstAttribute="top" secondItem="PPl-EV-uhp" secondAttribute="top" id="YA5-cz-qtp"/>
-                                            <constraint firstAttribute="height" constant="320" id="c7C-fU-4Me"/>
-                                            <constraint firstItem="j0y-Ld-5Ev" firstAttribute="leading" secondItem="PPl-EV-uhp" secondAttribute="leading" constant="5" id="lIw-f8-8LI"/>
-                                            <constraint firstItem="j0y-Ld-5Ev" firstAttribute="top" secondItem="4u9-sD-ozW" secondAttribute="bottom" id="qgZ-k2-pP9"/>
-                                            <constraint firstItem="4u9-sD-ozW" firstAttribute="leading" secondItem="PPl-EV-uhp" secondAttribute="leading" id="t06-9G-iUX"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X0G-Yq-sF7" userLabel="Support">
-                                        <rect key="frame" x="0.0" y="320" width="320" height="140"/>
+                                        <rect key="frame" x="0.0" y="10" width="320" height="140"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdI-wJ-fqP">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
@@ -472,7 +398,7 @@ Best Frequencies, Inc. is a non-profit organization with 501-c3 status. We happi
                                                     <fragment>
                                                         <string key="content">BFF.fm is a non-profit community radio station run by a volunteer staff who love music just as much as you do. Keep the fresh tunes coming by becoming a part of our awesome community --   Tap to support us with a donation! </string>
                                                         <attributes>
-                                                            <font key="NSFont" size="8" name="HelveticaNeue"/>
+                                                            <font key="NSFont" size="10" name="HelveticaNeue"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                         </attributes>
                                                     </fragment>
@@ -493,7 +419,7 @@ Best Frequencies, Inc. is a non-profit organization with 501-c3 status. We happi
                                         <constraints>
                                             <constraint firstItem="Dwe-6E-UEF" firstAttribute="top" secondItem="gdI-wJ-fqP" secondAttribute="bottom" id="2yz-WV-Vtq"/>
                                             <constraint firstAttribute="bottom" secondItem="Suq-05-Bmu" secondAttribute="bottom" id="9eh-O6-QnQ"/>
-                                            <constraint firstAttribute="height" constant="90" id="Jvc-ej-dhD"/>
+                                            <constraint firstAttribute="height" constant="116" id="Jvc-ej-dhD"/>
                                             <constraint firstItem="gdI-wJ-fqP" firstAttribute="top" secondItem="X0G-Yq-sF7" secondAttribute="top" id="PC8-aR-VOK"/>
                                             <constraint firstItem="gdI-wJ-fqP" firstAttribute="leading" secondItem="X0G-Yq-sF7" secondAttribute="leading" id="PFd-iR-SCu"/>
                                             <constraint firstAttribute="bottom" secondItem="Dwe-6E-UEF" secondAttribute="bottom" id="Wty-XY-eA5"/>
@@ -507,7 +433,7 @@ Best Frequencies, Inc. is a non-profit organization with 501-c3 status. We happi
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClK-Di-PV0" userLabel="Merch">
-                                        <rect key="frame" x="0.0" y="475" width="320" height="140"/>
+                                        <rect key="frame" x="0.0" y="160" width="320" height="140"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfZ-FV-DT1">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
@@ -545,7 +471,7 @@ Best Frequencies, Inc. is a non-profit organization with 501-c3 status. We happi
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Go to the merch store" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8I-7v-YxX">
                                                 <rect key="frame" x="78" y="44" width="168" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -558,10 +484,85 @@ Best Frequencies, Inc. is a non-profit organization with 501-c3 status. We happi
                                             <constraint firstItem="1Eg-tf-A3Y" firstAttribute="leading" secondItem="ClK-Di-PV0" secondAttribute="leading" id="L9g-f5-gqc"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="XvL-4R-a1a"/>
                                             <constraint firstItem="DfZ-FV-DT1" firstAttribute="leading" secondItem="ClK-Di-PV0" secondAttribute="leading" id="YsH-kb-M6E"/>
+                                            <constraint firstItem="O8I-7v-YxX" firstAttribute="leading" secondItem="ZTc-FA-1JA" secondAttribute="trailing" constant="10" id="goY-Am-B4H"/>
                                             <constraint firstItem="ZTc-FA-1JA" firstAttribute="top" secondItem="O8I-7v-YxX" secondAttribute="bottom" constant="-45" id="jOu-Ah-VQj"/>
                                             <constraint firstItem="1Eg-tf-A3Y" firstAttribute="top" secondItem="ClK-Di-PV0" secondAttribute="top" id="tCE-78-SK1"/>
                                             <constraint firstAttribute="trailing" secondItem="1Eg-tf-A3Y" secondAttribute="trailing" id="u83-lY-UhY"/>
                                             <constraint firstAttribute="trailing" secondItem="DfZ-FV-DT1" secondAttribute="trailing" id="v6Z-rp-0cn"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPl-EV-uhp" userLabel="About">
+                                        <rect key="frame" x="0.0" y="300" width="320" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u9-sD-ozW" userLabel="About">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="gUh-3h-8eM"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="  About">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0y-Ld-5Ev">
+                                                <rect key="frame" x="0.0" y="28" width="320" height="200"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">BFF.fm – Best Frequencies Forever. An award-winning San Francisco community radio station run by a team of music-obsessed radio enthusiasts, excited to share the stuff we love as we discover it. More than 75 DJs curate and host 60 unique music programs, plus we have 6 talk shows produced by noted local journalists and bloggers.
+
+Awards? Sure- we were named "SF's Best New Radio Station" by The Bold Italic, "Best New Internet Radio Station" by SF Weekly, voted "Best Radio Station" in San Francisco in SF Weekly's annual Reader's Poll, and we were just given a nod in the San Francisco Bay Guardian's "Best of the Bay" issue.
+
+Our studio is located inside of The Secret Alley, an artist workshop that provides local San Francisco artists a place to collaborate, palaver, scheme and dream. It’s easy to have fun and be creative in a Verne-esque library built inside a sea shanty with a ship crashing through it!
+
+Sound cool? We’re always on the look out for talented deejays, venue partners, collaborators and co-conspirators– anyone who loves radio and has big dreams and bright ideas. We also welcome music submissions from local and underground artists.
+
+Best Frequencies, Inc. is a non-profit organization with 501-c3 status. We happily accept tax-deductible donations to help keep us on the air and involved in the music community.  The money we raise (in addition to paying our rent, streaming services, and broadcast equipment maintenance expenses) supports the San Francisco music scene by enabling us to pay the bands that play our showcases and sponsor events that help keep the local music community vibrant.</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="10" name="HelveticaNeue"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKZ-ZW-uMV">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="supportStation:" destination="vjX-R7-0bp" eventType="touchUpInside" id="QdG-NO-6ae"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="98U-g8-GSt"/>
+                                            <constraint firstAttribute="bottom" secondItem="j0y-Ld-5Ev" secondAttribute="bottom" id="CIV-ie-Ipg"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZKZ-ZW-uMV" secondAttribute="bottom" id="CtQ-yn-adi"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZKZ-ZW-uMV" secondAttribute="trailing" id="MND-aH-jv9"/>
+                                            <constraint firstAttribute="trailing" secondItem="j0y-Ld-5Ev" secondAttribute="trailing" constant="5" id="Mce-Aw-KRt"/>
+                                            <constraint firstItem="ZKZ-ZW-uMV" firstAttribute="top" secondItem="PPl-EV-uhp" secondAttribute="top" id="Qze-iS-LGD"/>
+                                            <constraint firstItem="ZKZ-ZW-uMV" firstAttribute="leading" secondItem="PPl-EV-uhp" secondAttribute="leading" id="TFK-jN-5n3"/>
+                                            <constraint firstAttribute="trailing" secondItem="4u9-sD-ozW" secondAttribute="trailing" id="WLq-BC-Vpe"/>
+                                            <constraint firstItem="4u9-sD-ozW" firstAttribute="top" secondItem="PPl-EV-uhp" secondAttribute="top" id="YA5-cz-qtp"/>
+                                            <constraint firstAttribute="height" constant="454" id="c7C-fU-4Me"/>
+                                            <constraint firstItem="j0y-Ld-5Ev" firstAttribute="leading" secondItem="PPl-EV-uhp" secondAttribute="leading" constant="5" id="lIw-f8-8LI"/>
+                                            <constraint firstItem="j0y-Ld-5Ev" firstAttribute="top" secondItem="4u9-sD-ozW" secondAttribute="bottom" id="qgZ-k2-pP9"/>
+                                            <constraint firstItem="4u9-sD-ozW" firstAttribute="leading" secondItem="PPl-EV-uhp" secondAttribute="leading" id="t06-9G-iUX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -569,13 +570,13 @@ Best Frequencies, Inc. is a non-profit organization with 501-c3 status. We happi
                                     <constraint firstAttribute="centerX" secondItem="X0G-Yq-sF7" secondAttribute="centerX" id="054-QW-REi"/>
                                     <constraint firstAttribute="trailing" secondItem="PPl-EV-uhp" secondAttribute="trailing" id="Aaj-Zb-LZI"/>
                                     <constraint firstItem="PPl-EV-uhp" firstAttribute="leading" secondItem="dY3-2e-ZiN" secondAttribute="leading" id="Apa-30-Eue"/>
+                                    <constraint firstItem="X0G-Yq-sF7" firstAttribute="top" secondItem="dY3-2e-ZiN" secondAttribute="top" constant="10" id="EGf-IM-hqi"/>
                                     <constraint firstItem="X0G-Yq-sF7" firstAttribute="leading" secondItem="dY3-2e-ZiN" secondAttribute="leading" id="KVj-Aw-Re6"/>
+                                    <constraint firstItem="PPl-EV-uhp" firstAttribute="top" secondItem="ClK-Di-PV0" secondAttribute="bottom" constant="10" id="RwL-AE-77B"/>
                                     <constraint firstItem="ClK-Di-PV0" firstAttribute="width" secondItem="PPl-EV-uhp" secondAttribute="width" id="SvE-eZ-CvL"/>
+                                    <constraint firstAttribute="bottom" secondItem="PPl-EV-uhp" secondAttribute="bottom" constant="40" id="TH4-qX-0TR"/>
                                     <constraint firstAttribute="centerX" secondItem="PPl-EV-uhp" secondAttribute="centerX" id="TVB-Xy-sGo"/>
                                     <constraint firstItem="ClK-Di-PV0" firstAttribute="top" secondItem="X0G-Yq-sF7" secondAttribute="bottom" constant="10" id="Z1k-DQ-PhF"/>
-                                    <constraint firstItem="PPl-EV-uhp" firstAttribute="top" secondItem="dY3-2e-ZiN" secondAttribute="top" constant="10" id="eG5-MM-DVd"/>
-                                    <constraint firstAttribute="bottom" secondItem="ClK-Di-PV0" secondAttribute="bottom" constant="30" id="eJ4-fu-RoB"/>
-                                    <constraint firstItem="X0G-Yq-sF7" firstAttribute="top" secondItem="PPl-EV-uhp" secondAttribute="bottom" constant="10" id="ly4-lx-VkT"/>
                                     <constraint firstItem="ClK-Di-PV0" firstAttribute="width" secondItem="X0G-Yq-sF7" secondAttribute="width" id="sPR-bZ-Ead"/>
                                     <constraint firstAttribute="trailing" secondItem="X0G-Yq-sF7" secondAttribute="trailing" id="x6w-wh-nnv"/>
                                 </constraints>
@@ -602,7 +603,7 @@ Best Frequencies, Inc. is a non-profit organization with 501-c3 status. We happi
     </scenes>
     <resources>
         <image name="background" width="10" height="5"/>
-        <image name="logo" width="200" height="118"/>
+        <image name="logo" width="600" height="355"/>
         <image name="merch" width="607" height="605"/>
         <image name="play" width="256" height="256"/>
     </resources>
