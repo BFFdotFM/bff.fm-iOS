@@ -16,7 +16,6 @@
 		D300CC6F1A187ABF004DD3F0 /* ShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D300CC6E1A187ABF004DD3F0 /* ShowDetailViewController.m */; };
 		D300CC731A187AFA004DD3F0 /* ShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D300CC721A187AFA004DD3F0 /* ShowsViewController.m */; };
 		D300CC771A187B46004DD3F0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D300CC761A187B46004DD3F0 /* HomeViewController.m */; };
-		D300CC7B1A187B64004DD3F0 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D300CC7A1A187B64004DD3F0 /* EventsViewController.m */; };
 		D300CC831A187B8A004DD3F0 /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D300CC821A187B8A004DD3F0 /* SupportViewController.m */; };
 		D300CC861A188132004DD3F0 /* ShowCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D300CC851A188132004DD3F0 /* ShowCollectionViewCell.m */; };
 		D345A0721A192BC90014744B /* WeekdayHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D345A0711A192BC90014744B /* WeekdayHeaderCollectionReusableView.m */; };
@@ -63,8 +62,6 @@
 		D300CC721A187AFA004DD3F0 /* ShowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowsViewController.m; sourceTree = "<group>"; };
 		D300CC751A187B46004DD3F0 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D300CC761A187B46004DD3F0 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		D300CC791A187B64004DD3F0 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		D300CC7A1A187B64004DD3F0 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		D300CC811A187B8A004DD3F0 /* SupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportViewController.h; sourceTree = "<group>"; };
 		D300CC821A187B8A004DD3F0 /* SupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportViewController.m; sourceTree = "<group>"; };
 		D300CC841A188132004DD3F0 /* ShowCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCollectionViewCell.h; sourceTree = "<group>"; };
@@ -198,7 +195,6 @@
 				D3FE2FA11A18523A005A323F /* RootPageViewController.h */,
 				D3FE2FA21A18523A005A323F /* RootPageViewController.m */,
 				D300CC741A187B46004DD3F0 /* Home */,
-				D300CC781A187B64004DD3F0 /* Events */,
 				D300CC701A187AE3004DD3F0 /* Shows */,
 				D300CC6C1A187ABF004DD3F0 /* ShowDetail */,
 				D300CC801A187B8A004DD3F0 /* Support */,
@@ -329,15 +325,6 @@
 				D300CC761A187B46004DD3F0 /* HomeViewController.m */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		D300CC781A187B64004DD3F0 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				D300CC791A187B64004DD3F0 /* EventsViewController.h */,
-				D300CC7A1A187B64004DD3F0 /* EventsViewController.m */,
-			);
-			path = Events;
 			sourceTree = "<group>";
 		};
 		D300CC801A187B8A004DD3F0 /* Support */ = {
@@ -555,7 +542,6 @@
 			files = (
 				D376AB611A17F0640038F1F5 /* StreamingService.m in Sources */,
 				D300CC831A187B8A004DD3F0 /* SupportViewController.m in Sources */,
-				D300CC7B1A187B64004DD3F0 /* EventsViewController.m in Sources */,
 				962BD471F1B55FA5BF0793F4 /* AppDelegate.m in Sources */,
 				36F1BF771BBB7608C66DDC5F /* Main.storyboard in Sources */,
 				D3DE9C591A182E1F00E2C41B /* Image.m in Sources */,

@@ -10,6 +10,7 @@
 
 @interface RootPageViewController ()
 @property (strong, nonatomic) NSArray *viewControllers;
+@property (nonatomic, assign) NSInteger currentPageIndex;
 @end
 
 @implementation RootPageViewController
@@ -19,15 +20,22 @@
     [super viewDidLoad];
 
     self.viewControllers = @[
+                             [self.storyboard instantiateViewControllerWithIdentifier:@"SupportViewController"],
                              [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"],
-                             [self.storyboard instantiateViewControllerWithIdentifier:@"ShowsViewController"],
-                             [self.storyboard instantiateViewControllerWithIdentifier:@"EventsViewController"],
-                             [self.storyboard instantiateViewControllerWithIdentifier:@"SupportViewController"]
+                             [self.storyboard instantiateViewControllerWithIdentifier:@"ShowsViewController"]
                              ];
-    [self setViewControllers:@[[self.viewControllers objectAtIndex:0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    self.currentPageIndex = 1;
+    [self setViewControllers:@[[self.viewControllers objectAtIndex:((NSUInteger)self.currentPageIndex)]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self.pageControl setCurrentPage:self.currentPageIndex];
     self.delegate = self;
     self.dataSource = self;
     [self.pageControl setNumberOfPages:((NSInteger)[self.viewControllers count])];
+}
+
+- (void)setPageControl:(UIPageControl *)pageControl
+{
+    _pageControl = pageControl;
+    [_pageControl setCurrentPage:self.currentPageIndex];
 }
 
 #pragma mark - UIPageViewController delegate methods
@@ -67,15 +75,15 @@
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
 {
-    NSUInteger currentIndex = [self.viewControllers indexOfObject:[pendingViewControllers objectAtIndex:0]];
-    [self.pageControl setCurrentPage:((NSInteger)currentIndex)];
+    self.currentPageIndex = [self.viewControllers indexOfObject:[pendingViewControllers objectAtIndex:0]];
+    [self.pageControl setCurrentPage:self.currentPageIndex];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
 {
     if (completed == NO) {
-        NSUInteger currentIndex = [self.viewControllers indexOfObject:[previousViewControllers objectAtIndex:0]];
-        [self.pageControl setCurrentPage:((NSInteger)currentIndex)];
+        self.currentPageIndex = [self.viewControllers indexOfObject:[previousViewControllers objectAtIndex:0]];
+        [self.pageControl setCurrentPage:self.currentPageIndex];
     }
 }
 

@@ -257,7 +257,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionHeader" id="CMB-xP-aKr" userLabel="Section Header" customClass="WeekdayHeaderCollectionReusableView">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzx-Qk-yHq">
@@ -285,36 +285,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ao-yj-Q1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="454" y="1146"/>
-        </scene>
-        <!--Events View Controller-->
-        <scene sceneID="68K-BX-FLC">
-            <objects>
-                <viewController storyboardIdentifier="EventsViewController" id="wnJ-aR-eC8" customClass="EventsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VZm-1C-KOT"/>
-                        <viewControllerLayoutGuide type="bottom" id="PMc-fW-68z"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="A2z-B5-7Om">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events View Controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxP-TD-6mn">
-                                <rect key="frame" x="74" y="273" width="173" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="TxP-TD-6mn" secondAttribute="centerX" id="DNj-9a-MBu"/>
-                            <constraint firstAttribute="centerY" secondItem="TxP-TD-6mn" secondAttribute="centerY" id="nl1-rg-MYt"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KLJ-mR-4Ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="829" y="1146"/>
         </scene>
         <!--Support View Controller-->
         <scene sceneID="zba-e8-zzQ">
@@ -344,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRD-L7-Sfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="1150"/>
+            <point key="canvasLocation" x="824" y="1146"/>
         </scene>
     </scenes>
     <resources>
