@@ -16,6 +16,7 @@
             _title = [dictionary objectForKey:@"title"];
             _url = [dictionary objectForKey:@"url"];
             _shortDescription = [dictionary objectForKey:@"short_description"];
+            _fullDescription = [dictionary objectForKey:@"full_description"];
             
             
             // When an image does not exist, it is represented in the JSON as "Image: 0"

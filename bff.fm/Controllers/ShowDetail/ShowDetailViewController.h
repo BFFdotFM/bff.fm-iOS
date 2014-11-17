@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Show.h"
 
 @interface ShowDetailViewController : UIViewController
-
+- (void)setShow:(Show *)show;
 @end

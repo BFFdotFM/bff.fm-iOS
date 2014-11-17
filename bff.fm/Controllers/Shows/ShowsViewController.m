@@ -11,6 +11,7 @@
 #import "Show.h"
 #import "ShowCollectionViewCell.h"
 #import "WeekdayHeaderCollectionReusableView.h"
+#import "ShowDetailViewController.h"
 
 @interface ShowsViewController ()
 @property (strong, nonatomic) NSDictionary *shows;
@@ -23,6 +24,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    
     [[CreekService sharedService] fetchAllShows:^(NSArray *allShows) {
         NSMutableDictionary *shows = [NSMutableDictionary new];
         
@@ -72,18 +77,7 @@
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:(currentDay - 1)]
                                     atScrollPosition:UICollectionViewScrollPositionTop animated:NO];
     }];
-    
-    self.collectionView.dataSource = self;
 }
-
-- (IBAction)popup:(id)sender
-{
-    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ShowDetailViewController"];
-    [self presentViewController:vc animated:YES completion:^{
-        NSLog(@"Done");
-    }];
-}
-
 
 #pragma mark - UICollectionViewDataSource
 
@@ -116,15 +110,27 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ShowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShowCollectionViewCell" forIndexPath:indexPath];
-    int day = (int)[self sectionToWeekDay:indexPath.section];
-    Show *show = [[self.shows objectForKey:@(day)] objectAtIndex:((NSUInteger)indexPath.row)];
-    
-    [cell setShow:show];
+    [cell setShow:[self showForIndexPath:indexPath]];
     return cell;
 }
 
 - (NSInteger)sectionToWeekDay:(NSInteger)section
 {
     return section + 1;
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ShowDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ShowDetailViewController"];
+    [vc setShow:[self showForIndexPath:indexPath]];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+#pragma mark - Utility
+- (Show *)showForIndexPath:(NSIndexPath *)indexPath
+{
+    int day = (int)[self sectionToWeekDay:indexPath.section];
+    return [[self.shows objectForKey:@(day)] objectAtIndex:((NSUInteger)indexPath.row)];
 }
 @end

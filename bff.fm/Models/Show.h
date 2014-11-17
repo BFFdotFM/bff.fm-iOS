@@ -24,6 +24,7 @@ NS_ENUM(NSInteger, WeekDay) {
 
 @interface Show : NSObject
 @property (strong, nonatomic) NSString *shortDescription;
+@property (strong, nonatomic) NSString *fullDescription;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) Image *image;
