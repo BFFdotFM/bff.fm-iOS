@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "31D9F7C9456EF1FEA1414BE1"
-               BuildableName = "bff.fm.app"
-               BlueprintName = "bff.fm"
+               BuildableName = "BFF.fm.app"
+               BlueprintName = "BFF.fm"
                ReferencedContainer = "container:bff.fm.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "31D9F7C9456EF1FEA1414BE1"
-            BuildableName = "bff.fm.app"
-            BlueprintName = "bff.fm"
+            BuildableName = "BFF.fm.app"
+            BlueprintName = "BFF.fm"
             ReferencedContainer = "container:bff.fm.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "31D9F7C9456EF1FEA1414BE1"
-            BuildableName = "bff.fm.app"
-            BlueprintName = "bff.fm"
+            BuildableName = "BFF.fm.app"
+            BlueprintName = "BFF.fm"
             ReferencedContainer = "container:bff.fm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "31D9F7C9456EF1FEA1414BE1"
-            BuildableName = "bff.fm.app"
-            BlueprintName = "bff.fm"
+            BuildableName = "BFF.fm.app"
+            BlueprintName = "BFF.fm"
             ReferencedContainer = "container:bff.fm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
