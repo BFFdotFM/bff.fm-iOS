@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36F1BF771BBB7608C66DDC5F /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 155EBB0BBD4D801AAA6AA1E2 /* Main.storyboard */; };
 		39720043CA85000A157AF5D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D820653B1517EFB19E393079 /* main.m */; };
 		5D66385EDF2B0137CECDEA6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F114C7AC4B100C8D433FA933 /* Images.xcassets */; };
 		90655BBB868E41FE80AA5362 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = D97ADB62813951F788505EB1 /* LaunchScreen.xib */; };
 		962BD471F1B55FA5BF0793F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E367F5D5A1EC3A103F3C3D0F /* AppDelegate.m */; };
+		A8E4E46A1C4C4C4400388B18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155EBB0BBD4D801AAA6AA1E2 /* Main.storyboard */; };
 		B4DF2146E71485D5B71A5827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A62FF1A1E7A9D49EAEDEF2 /* Foundation.framework */; };
 		D300CC6F1A187ABF004DD3F0 /* ShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D300CC6E1A187ABF004DD3F0 /* ShowDetailViewController.m */; };
 		D300CC731A187AFA004DD3F0 /* ShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D300CC721A187AFA004DD3F0 /* ShowsViewController.m */; };
@@ -411,8 +411,18 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = bff.fm;
+				TargetAttributes = {
+					31D9F7C9456EF1FEA1414BE1 = {
+						DevelopmentTeam = S52TEVFZTP;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 208F282E7331D12317CA5CBF /* Build configuration list for PBXProject "bff.fm" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -438,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D66385EDF2B0137CECDEA6D /* Images.xcassets in Resources */,
+				A8E4E46A1C4C4C4400388B18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +554,6 @@
 				D376AB611A17F0640038F1F5 /* StreamingService.m in Sources */,
 				D300CC831A187B8A004DD3F0 /* SupportViewController.m in Sources */,
 				962BD471F1B55FA5BF0793F4 /* AppDelegate.m in Sources */,
-				36F1BF771BBB7608C66DDC5F /* Main.storyboard in Sources */,
 				D3DE9C591A182E1F00E2C41B /* Image.m in Sources */,
 				D3FE2FA31A18523A005A323F /* RootPageViewController.m in Sources */,
 				D3F84BA21A1804C700BCAE1E /* CreekService.m in Sources */,
@@ -582,6 +592,7 @@
 				);
 				GCC_PREFIX_HEADER = "UnitTests/Resources/UnitTests-Prefix.pch";
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "fm.bff.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -643,6 +654,7 @@
 			baseConfigurationReference = B582706505D6F7D1D9AA1DB5 /* Pods-app.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -657,10 +669,11 @@
 				INFOPLIST_FILE = "Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fm.bff.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -669,6 +682,7 @@
 			baseConfigurationReference = 6231512F33F8A1DC108D46DA /* Pods-app.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -685,10 +699,11 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fm.bff.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -715,6 +730,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -759,6 +775,7 @@
 				);
 				GCC_PREFIX_HEADER = "UnitTests/Resources/UnitTests-Prefix.pch";
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "fm.bff.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

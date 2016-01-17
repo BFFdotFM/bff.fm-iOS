@@ -20,35 +20,40 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Expecta (0.3.1)
-  - OCMock (2.2.4)
-  - OHHTTPStubs (3.1.6):
+  - Expecta (1.0.5)
+  - OCMock (3.2.1)
+  - OHHTTPStubs (4.7.0):
+    - OHHTTPStubs/Default
+  - OHHTTPStubs/Core (4.7.0)
+  - OHHTTPStubs/Default (4.7.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/Core (3.1.6)
-  - SDWebImage (3.7.1):
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (4.7.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (4.7.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (4.7.0)
+  - SDWebImage (3.7.4):
     - SDWebImage/Core
-  - SDWebImage/Core (3.7.1)
-  - Specta (0.3.0.beta1)
+  - SDWebImage/Core (3.7.4)
+  - Specta (1.0.5)
 
 DEPENDENCIES:
-  - AFNetworking
-  - Expecta (~> 0.3.1)
-  - OCMock (~> 2.2.1)
+  - AFNetworking (~> 2.4.1)
+  - Expecta
+  - OCMock
   - OHHTTPStubs
   - SDWebImage
-  - Specta (from `https://github.com/specta/specta.git`, tag `v0.3.0.beta1`)
-
-EXTERNAL SOURCES:
-  Specta:
-    :git: https://github.com/specta/specta.git
-    :tag: v0.3.0.beta1
+  - Specta
 
 SPEC CHECKSUMS:
-  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
-  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
-  OCMock: 6db79185520e24f9f299548f2b8b07e41d881bd5
-  OHHTTPStubs: 6781373b69e0a67b27239799f11764d0fbefac55
-  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
-  Specta: 63e8ac8e07db6675c7096d37f77a266a1be4c02d
+  AFNetworking: 41d45d2c14219af0fa5addf3cfd433a002c13c9f
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  OCMock: f9622770761b680e505f893885780d369ae30016
+  OHHTTPStubs: d2bf6a0f407620d67e75a1d3f12d86a2b1dd15c0
+  SDWebImage: 247edd7dd80dd6124197b0d6a17846fe9d1df968
+  Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
 
 COCOAPODS: 0.34.4

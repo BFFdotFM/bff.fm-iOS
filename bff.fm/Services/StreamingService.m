@@ -9,6 +9,7 @@
 #import "StreamingService.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AFNetworking/AFNetworking.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface StreamingService ()
 @property (strong, nonatomic) AVPlayerItem *playerItem;
@@ -38,6 +39,7 @@
         self.playerItem = [AVPlayerItem playerItemWithURL:url];
         //[self.playerItem addObserver:self forKeyPath:@"status" options:0 context:&ItemStatusContext];
         self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
         if (completionHandler) { completionHandler(YES); }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
