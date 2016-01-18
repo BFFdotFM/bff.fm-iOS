@@ -48,10 +48,10 @@
                                                NSDate *right = ((Show *) obj2).start;
                                                
                                                NSCalendar *calendar = [NSCalendar currentCalendar];
-                                               NSDateComponents *leftComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:left];
+                                               NSDateComponents *leftComponents = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute ) fromDate:left];
                                                NSInteger leftMinutes = ([leftComponents hour] * 60) + [leftComponents minute];
                                                
-                                               NSDateComponents *rightComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:right];
+                                               NSDateComponents *rightComponents = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:right];
                                                NSInteger rightMinutes = ([rightComponents hour] * 60) + [rightComponents minute];
                                                
                                                if (leftMinutes < rightMinutes) {
@@ -68,8 +68,8 @@
         self.shows = shows;
         [self.collectionView reloadData];
         
-         NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-         NSDateComponents *dateComponents = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
+         NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+         NSDateComponents *dateComponents = [gregorian components:NSCalendarUnitWeekday fromDate:[NSDate date]];
         
         // Creek.fm starts on Monday
         enum WeekDay currentDay = Sunday - [dateComponents weekday] + 1;
