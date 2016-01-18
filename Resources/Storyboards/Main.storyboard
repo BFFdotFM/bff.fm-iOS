@@ -84,10 +84,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-Rv-gUM" userLabel="Current Show">
+                            <view contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-Rv-gUM" userLabel="Current Show">
                                 <rect key="frame" x="16" y="103" width="288" height="364"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gfk-Rh-l7W" userLabel="Logo">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gfk-Rh-l7W" userLabel="Logo">
                                         <rect key="frame" x="8" y="8" width="272" height="272"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -96,7 +96,7 @@
                                             <constraint firstAttribute="height" constant="272" id="uTO-H4-e2A"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bw-N9-z64" userLabel="Name">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bw-N9-z64" userLabel="Name">
                                         <rect key="frame" x="8" y="288" width="272" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Ryq-Vo-qAo"/>
@@ -129,11 +129,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="7mo-Rv-gUM" secondAttribute="trailing" constant="16" id="7aU-1d-GFx"/>
-                            <constraint firstItem="7mo-Rv-gUM" firstAttribute="leading" secondItem="HvK-Mr-7Ub" secondAttribute="leading" constant="16" id="A4h-YI-cUF"/>
-                            <constraint firstAttribute="centerY" secondItem="7mo-Rv-gUM" secondAttribute="centerY" constant="10" id="p5j-rK-FPh"/>
-                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
@@ -339,23 +334,6 @@
             </objects>
             <point key="canvasLocation" x="852" y="1104"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="gKM-d0-aRg">
-            <objects>
-                <viewController id="buz-W9-Vt6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xVh-Z2-yWU"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ea9-MF-lMx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jk0-7Y-Xwk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpj-hz-Crj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--Support View Controller-->
         <scene sceneID="0Up-dl-uyc">
             <objects>
@@ -396,9 +374,15 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <string key="content">BFF.fm is a non-profit community radio station run by a volunteer staff who love music just as much as you do. Keep the fresh tunes coming by becoming a part of our awesome community --   Tap to support us with a donation! </string>
+                                                        <string key="content">BFF.fm is a non-profit community radio station run by a volunteer staff who love music just as much as you do. Keep the fresh tunes coming by becoming a part of our awesome community --   </string>
                                                         <attributes>
                                                             <font key="NSFont" size="10" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Tap to support us with a donation! ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                         </attributes>
                                                     </fragment>
