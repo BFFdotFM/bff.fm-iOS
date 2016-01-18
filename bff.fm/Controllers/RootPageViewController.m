@@ -2,8 +2,8 @@
 //  RootPageViewController.m
 //  bff.fm
 //
-//  Created by Brian Temple on 11/15/14.
-//  Copyright (c) 2014 bff.fm. All rights reserved.
+//  Modified by Forrest Guest on 2015-01-17.
+//  Copyright (c) 2015 bff.fm. All rights reserved.
 //
 
 #import "RootPageViewController.h"
@@ -75,14 +75,14 @@
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
 {
-    self.currentPageIndex = [self.viewControllers indexOfObject:[pendingViewControllers objectAtIndex:0]];
+    self.currentPageIndex = (NSInteger)[self.viewControllers indexOfObject:[pendingViewControllers objectAtIndex:0]];
     [self.pageControl setCurrentPage:self.currentPageIndex];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
 {
     if (completed == NO) {
-        self.currentPageIndex = [self.viewControllers indexOfObject:[previousViewControllers objectAtIndex:0]];
+        self.currentPageIndex = (NSInteger)[self.viewControllers indexOfObject:[previousViewControllers objectAtIndex:0]];
         [self.pageControl setCurrentPage:self.currentPageIndex];
     }
 }
